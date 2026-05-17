@@ -48,8 +48,7 @@ Per a estabilitzar i guiar la simulació en les seves fases inicials, s'aplica *
    if_no_pbl_nudging_q  = 1 
    if_no_pbl_nudging_uv = 1 
 /
----
-
+```
 ### 📊 Diagnòstics Avançats i Temps Sever (Domini d03)03)
 
 Per a l'extracció de variables d'impacte en el domini de major resolució (3 km), s'han activat els mòduls de diagnòstic de la **AFWA** i la parametrització de descàrregues elèctriques per al càlcul del *Índex de Potencial de Llamps (LPI)**.
@@ -62,4 +61,4 @@ Per a l'extracció de variables d'impacte en el domini de major resolució (3 km
    afwa_severe_opt = 1,
    afwa_vis_opt    = 1,
 /
----
+```
