@@ -28,7 +28,26 @@ Este dashboard interactivo permite visualizar y analizar datos meteorológicos d
 | **Física de Superficie** | Unified Noah land-surface model | d01, d02, d03 |
 | **Capa Superficial** | Revised MM5 Monin-Obukhov scheme (Jimenez, renamed in v3.6) | d01, d02, d03 |
 | **Rayos** | Predicting the potential for lightning activity (based on Yair et al., 2010) | d03 |
+### 🔄 Ciclo Operativo e Inicialización
+* **Ciclo Diario:** El modelo se ejecuta diariamente a las **18 UTC**.
+* **Condiciones Iniciales y de Contorno:** Se inicializa a partir de la hora +6 de pronóstico de la salida de las **12 UTC del modelo GFS a 0.5 grados** de resolución (coincidiendo así con el inicio de la simulación a las 18 UTC).
 
+### 🧲 Asimilación de Datos (Grid Nudging)
+Para estabilizar y guiar la simulación en sus fases iniciales, se aplica *grid nudging* (FDDA) al dominio exterior (**d01**) hacia las condiciones del modelo GFS. Este forzamiento se mantiene activo únicamente durante las **6 primeras horas** de simulación. Además, se excluye de este proceso a la Capa Límite Planetaria (PBL) para permitir que el modelo resuelva localmente la física de superficie sin interferencias.
+
+**Extracto del namelist para FDDA:**
+```fortran
+&fdda 
+   grid_fdda            = 1 
+   gfdda_inname         = "wrffdda_d<domain>" 
+   gfdda_interval_m     = 180 
+   gfdda_end_h          = 6 
+   io_form_gfdda        = 2 
+   fgdt                 = 0 
+   if_no_pbl_nudging_t  = 1 
+   if_no_pbl_nudging_q  = 1 
+   if_no_pbl_nudging_uv = 1 
+/
 ---
 
 ### 📊 Diagnósticos Avanzados y Tiempo Severo (Dominio d03)
