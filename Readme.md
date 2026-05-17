@@ -22,7 +22,7 @@ Aquest dashboard interactiu permet visualitzar i analitzar dades meteorològique
 | Esquema Físic | Configuració | Aplicació |
 | :--- | :--- | :--- |
 | **Microfísica** | WDM6 | d01, d02, d03 |
-| **Cúmuls** | Grell-Freitas | d01, d02 *(Apagada explícitament enn d03)* |
+| **Cúmuls** | Grell-Freitas | d01, d02 *(Apagada explícitament en d03)* |
 | **Capa Límit (PBL)** | YSU | d01, d02, d03 |
 | **Radiació (Ona Llarga y Curta)** | RRTMG scheme | d01, d02, d03 |
 | **Física de Superfície** | Unified Noah land-surface model | d01, d02, d03 |
