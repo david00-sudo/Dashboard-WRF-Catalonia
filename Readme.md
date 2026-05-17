@@ -7,7 +7,6 @@ Bienvenido al repositorio de presentación de **WRF-Catalunya**.
 ## 📖 Sobre el proyecto
 Este dashboard interactivo permite visualizar y analizar datos meteorológicos de alta resolución para Catalunya, procesando salidas numéricas del modelo WRF (Weather Research and Forecasting). 
 
-
 ## 🛠️ Stack Tecnológico
 * **Frontend:** Streamlit
 * **Procesamiento de datos:** Python (Pandas, Xarray, etc.)
@@ -25,6 +24,10 @@ Este dashboard interactivo permite visualizar y analizar datos meteorológicos d
 | **Microfísica** | WDM6 | d01, d02, d03 |
 | **Cúmulos** | Grell-Freitas | d01, d02 *(Apagado explícitamente en d03)* |
 | **Capa Límite (PBL)** | YSU | d01, d02, d03 |
+| **Radiación (Onda Larga y Corta)** | RRTMG scheme | d01, d02, d03 |
+| **Física de Superficie** | Unified Noah land-surface model | d01, d02, d03 |
+| **Capa Superficial** | Revised MM5 Monin-Obukhov scheme (Jimenez, renamed in v3.6) | d01, d02, d03 |
+| **Rayos** | Predicting the potential for lightning activity (based on Yair et al., 2010) | d03 |
 
 ---
 
@@ -33,11 +36,10 @@ Este dashboard interactivo permite visualizar y analizar datos meteorológicos d
 Para la extracción de variables de impacto en el dominio de mayor resolución (3 km), se han activado los módulos de diagnóstico de la **AFWA** y la parametrización de descargas eléctricas para el cálculo del **Índice de Potencial de Rayos (LPI)**.
 
 **Configuración de Diagnósticos AFWA:**
-```
+```fortran
 &afwa
    afwa_diag_opt   = 1,
    afwa_buoy_opt   = 1,
    afwa_severe_opt = 1,
    afwa_vis_opt    = 1,
 /
-
