@@ -16,7 +16,7 @@ Aquest dashboard interactiu permet visualitzar i analitzar dades meteorològique
 
 ### 🌍 Dominis i Estratègia de nesting
 * **Resolució Espacial:** 3 dominis(27 km ➔ 9 km ➔ 3 km).
-* **Execució:** Els dominis **d01 (27 km)* i **d02 (9 km)* s'executen de manera simultània. El domini d'alta resolució **d03 (3 km)* s'alimenta posteriorment de les sortides del d02 utilitzant la `ndown` (1-way nesting).
+* **Execució:** Els dominis **d01 (27 km)** i **d02 (9 km)** s'executen de manera simultània. El domini d'alta resolució **d03** (**3 km**) s'alimenta posteriorment de les sortides del d02 utilitzant la `ndown` (1-way nesting).
 
 ### 🔬 Parametritzacions Físiques
 | Esquema Físic | Configuració | Aplicació |
