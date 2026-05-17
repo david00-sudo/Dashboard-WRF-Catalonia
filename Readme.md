@@ -62,3 +62,4 @@ Per a l'extracció de variables d'impacte en el domini de major resolució (3 km
    afwa_severe_opt = 1,
    afwa_vis_opt    = 1,
 /
+---
