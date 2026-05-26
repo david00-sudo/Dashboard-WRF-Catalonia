@@ -30,7 +30,7 @@ Aquest dashboard interactiu permet visualitzar i analitzar dades meteorològique
 | **Llamps** | Predicting the potential for lightning activity (based on Yair et al., 2010) | d03 |
 ### 🔄 Cicle Operatiu i Inicialització
 * **Cicle Diari::** El model s'executa diàriament a les **18 UTC**.
-* **Condicions Inicials i de Contorno:** s'inicialitza a partir de l'hora +6 de pronòstic de la sortida de les **12 UTC del model GFS a 0.5 graus** de resolució.
+* **Condicions Inicials i de Contorno:** S'inicialitza a partir de l'anàlisi de les 12 UTC del model GFS a 0.5 graus** de resolució. Les 6 primeres hores es consideren com a Spinup.
 
 ### 🧲 Asimilació de Dades (Grid Nudging)
 Per a estabilitzar i guiar la simulació en les seves fases inicials, s'aplica *grid nudging* (FDDA) al domini exterior (**d01**) cap a les condicions del model GFS. Aquest forçament es manté actiu únicament durant les **6 primeres hores** de simulació. A més, s'exclou d'aquest procés a la Capa Límit Planetària (PBL) per a permetre que el model resolgui localment la física de superfície sense interferències.
@@ -99,7 +99,7 @@ This interactive dashboard allows users to visualize and analyze high-resolution
 
 ### 🔄 Operational Cycle and Initialization
 * **Daily Cycle:** The model runs daily at **18 UTC**.
-* **Initial and Boundary Conditions:** Initialized from the +6 forecast hour of the **12 UTC GFS model output at 0.5° resolution**.
+* **Initial and Boundary Conditions:** Initialized from the 12 UTC analysis of the GFS model output at 0.5° resolution. The first 6 hours are considered spin-up
 
 ### 🧲 Data Assimilation (Grid Nudging)
 To stabilize and guide the simulation during its initial stages, *grid nudging* (FDDA) is applied to the outer domain (**d01**) toward GFS model conditions. This forcing remains active only during the **first 6 hours** of the simulation. Additionally, the Planetary Boundary Layer (PBL) is excluded from this process to allow the model to locally resolve surface physics without interference.
