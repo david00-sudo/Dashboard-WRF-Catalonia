@@ -4,7 +4,7 @@
 
 Benvingut al repositori de presentació de WRF-Catalunya.
 
-[Visita l'aplicació web aquí: wrf-catalunya.streamlit.app](https://wrf-catalunya.streamlit.app/)
+[Visita l'aplicació web aquí: https://wrfcatalunya.cat/](https://wrfcatalunya.cat/)
 
 ### Sobre el projecte
 Aquest dashboard interactiu permet visualitzar i analitzar dades meteorològiques d'alta resolució per a Catalunya, processant sortides numèriques del model WRF (Weather Research and Forecasting).
